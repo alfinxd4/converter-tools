@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Storage</title>
+    <!-- cdn tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- cdn flowbite -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css" rel="stylesheet" />
+</head>
+
+<body class="bg-slate-600">
+    <!-- start header -->
+    <header class=" bg-sky-800 p-5 flex gap-16">
+        <div class="cursor-pointer my-auto">
+            <a href="index.html">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="white" class="w-6 h-6">
+                    <path
+                        d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z" />
+                </svg>
+            </a>
+        </div>
+        <div>
+            <p class="text-white font-bold text-2xl">Storage</p>
+        </div>
+    </header>
+    <!-- end header -->
+    <!-- start main -->
+    <main class="mt-5 mx-5">
+        <!--  -->
+        <div class="flex justify-between gap-4">
+            <!--  -->
+            <div class="flex-1">
+                <label for="" id="labelFrom" class="text-white font-semibold">Gigabyte (GB)</label>
+                <input
+                    class="shadow appearance-none border-blue-400 rounded w-full bg-transparent py-2 px-3 mt-2 text-white text-xl font-semibold text-center leading-tight focus:outline-none focus:shadow-outline"
+                    id="inputStorage" type="number">
+            </div>
+            <!--  -->
+            <!--  -->
+            <div class="flex-1">
+                <Label for="" id="labelTo" class="text-white font-semibold">Megabyte (MB)</Label>
+                <input
+                    class="shadow appearance-none border-blue-400 rounded w-full bg-transparent py-2 px-3 mt-2  text-white text-xl font-semibold text-center leading-tight focus:outline-none focus:shadow-outline"
+                    id="outputStorage" type="text" value="0" readonly>
+            </div>
+            <!--  -->
+        </div>
+        <!--  -->
+        <!--  -->
+        <div class="flex mt-5">
+            <div class="flex-1">
+                <p class="font-semibold text-white mb-4">From</p>
+                <!--  -->
+                <div class="flex items-center mb-4">
+                    <input id="fb" type="radio" value="Bit (b)" name="radio1"
+                        class="w-5 h-5 text-sky-800 bg-gray-100 border-gray-300 focus:ring-sky-800 dark:focus:ring-sky-800 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                    <label for="" class="ms-2 text-sm font-medium text-white">Bit (b)</label>
+                </div>
+                <!--  -->
+                <div class="flex items-center mb-4">
+                    <input id="fB" type="radio" value="Byte (B)" name="radio1"
+                        class="w-5 h-5 text-sky-800 bg-gray-100 border-gray-300 focus:ring-sky-800 dark:focus:ring-sky-800 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                    <label for="" class="ms-2 text-sm font-medium text-white">Byte (B)</label>
+                </div>
+                <!--  -->
+                <div class="flex items-center mb-4">
+                    <input id="fkb" type="radio" value="Kilobit (kb)" name="radio1"
+                        class="w-5 h-5 text-sky-800 bg-gray-100 border-gray-300 focus:ring-sky-800 dark:focus:ring-sky-800 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                    <label for="" class="ms-2 text-sm font-medium text-white">Kilobit (kb)</label>
+                </div>
+                <!--  -->
+                <div class="flex items-center mb-4">
+                    <input id="fKB" type="radio" value="Kilobyte (KB)" name="radio1"
+                        class="w-5 h-5 text-sky-800 bg-gray-100 border-gray-300 focus:ring-sky-800 dark:focus:ring-sky-800 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                    <label for="" class="ms-2 text-sm font-medium text-white">Kilobyte (KB)</label>
+                </div>
+                <!--  -->
+                <div class="flex items-center mb-4">
+                    <input id="fmb" type="radio" value="Megabit (mb)" name="radio1"
+                        class="w-5 h-5 text-sky-800 bg-gray-100 border-gray-300 focus:ring-sky-800 dark:focus:ring-sky-800 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                    <label for="" class="ms-2 text-sm font-medium text-white">Megabit (mb)</label>
+                </div>
+                <!--  -->
+                <div class="flex items-center mb-4">
+                    <input id="fMB" type="radio" value="Megabyte (MB)" name="radio1"
+                        class="w-5 h-5 text-sky-800 bg-gray-100 border-gray-300 focus:ring-sky-800 dark:focus:ring-sky-800 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                    <label for="" class="ms-2 text-sm font-medium text-white">Megabyte (MB)</label>
+                </div>
+                <!--  -->
+                <div class="flex items-center mb-4">
+                    <input id="fgb" type="radio" value="Gigabit (gb)" name="radio1"
+                        class="w-5 h-5 text-sky-800 bg-gray-100 border-gray-300 focus:ring-sky-800 dark:focus:ring-sky-800 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                    <label for="" class="ms-2 text-sm font-medium text-white">Gigabit (gb)</label>
+                </div>
+                <!--  -->
+                <div class="flex items-center mb-4">
+                    <input id="fGB" type="radio" value="Gigabyte (GB)" name="radio1"
+                        class="w-5 h-5 text-sky-800 bg-gray-100 border-gray-300 focus:ring-sky-800 dark:focus:ring-sky-800 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                    <label for="" class="ms-2 text-sm font-medium text-white">Gigabyte (GB)</label>
+                </div>
+                <!--  -->
+                <div class="flex items-center mb-4">
+                    <input id="ftb" type="radio" value="Terabit (tb) " name="radio1"
+                        class="w-5 h-5 text-sky-800 bg-gray-100 border-gray-300 focus:ring-sky-800 dark:focus:ring-sky-800 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                    <label for="" class="ms-2 text-sm font-medium text-white">Terabit (tb) </label>
+                </div>
+                <!--  -->
+                <div class="flex items-center mb-4">
+                    <input id="fTB" type="radio" value="Terabyte (TB)" name="radio1"
+                        class="w-5 h-5 text-sky-800 bg-gray-100 border-gray-300 focus:ring-sky-800 dark:focus:ring-sky-800 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                    <label for="" class="ms-2 text-sm font-medium text-white">Terabyte (TB)</label>
+                </div>
+
+            </div>
+
+            <div class="flex-1">
+                <p class="font-semibold text-white mb-4">To</p>
+                <!--  -->
+                <div class="flex items-center mb-4">
+                    <input id="tb" type="radio" value="Bit (b)" name="radio2"
+                        class="w-5 h-5 text-sky-800 bg-gray-100 border-gray-300 focus:ring-sky-800 dark:focus:ring-sky-800 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                    <label for="" class="ms-2 text-sm font-medium text-white">Bit (b)</label>
+                </div>
+                <!--  -->
+                <div class="flex items-center mb-4">
+                    <input id="tB" type="radio" value="Byte (B)" name="radio2"
+                        class="w-5 h-5 text-sky-800 bg-gray-100 border-gray-300 focus:ring-sky-800 dark:focus:ring-sky-800 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                    <label for="" class="ms-2 text-sm font-medium text-white">Byte (B)</label>
+                </div>
+                <!--  -->
+                <div class="flex items-center mb-4">
+                    <input id="tkb" type="radio" value="Kilobit (kb)" name="radio2"
+                        class="w-5 h-5 text-sky-800 bg-gray-100 border-gray-300 focus:ring-sky-800 dark:focus:ring-sky-800 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                    <label for="" class="ms-2 text-sm font-medium text-white">Kilobit (kb)</label>
+                </div>
+                <!--  -->
+                <div class="flex items-center mb-4">
+                    <input id="tKB" type="radio" value="Kilobyte (KB)" name="radio2"
+                        class="w-5 h-5 text-sky-800 bg-gray-100 border-gray-300 focus:ring-sky-800 dark:focus:ring-sky-800 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                    <label for="" class="ms-2 text-sm font-medium text-white">Kilobyte (KB)</label>
+                </div>
+                <!--  -->
+                <div class="flex items-center mb-4">
+                    <input id="tmb" type="radio" value="Megabit (mb)" name="radio2"
+                        class="w-5 h-5 text-sky-800 bg-gray-100 border-gray-300 focus:ring-sky-800 dark:focus:ring-sky-800 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                    <label for="" class="ms-2 text-sm font-medium text-white">Megabit (mb)</label>
+                </div>
+                <!--  -->
+                <div class="flex items-center mb-4">
+                    <input id="tMB" type="radio" value="Megabyte (MB)" name="radio2"
+                        class="w-5 h-5 text-sky-800 bg-gray-100 border-gray-300 focus:ring-sky-800 dark:focus:ring-sky-800 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                    <label for="" class="ms-2 text-sm font-medium text-white">Megabyte (MB)</label>
+                </div>
+                <!--  -->
+                <div class="flex items-center mb-4">
+                    <input id="tgb" type="radio" value="Gigabit (gb)" name="radio2"
+                        class="w-5 h-5 text-sky-800 bg-gray-100 border-gray-300 focus:ring-sky-800 dark:focus:ring-sky-800 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                    <label for="" class="ms-2 text-sm font-medium text-white">Gigabit (gb)</label>
+                </div>
+                <!--  -->
+                <div class="flex items-center mb-4">
+                    <input id="tGB" type="radio" value="Gigabyte (GB)" name="radio2"
+                        class="w-5 h-5 text-sky-800 bg-gray-100 border-gray-300 focus:ring-sky-800 dark:focus:ring-sky-800 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                    <label for="" class="ms-2 text-sm font-medium text-white">Gigabyte (GB)</label>
+                </div>
+                <!--  -->
+                <div class="flex items-center mb-4">
+                    <input id="ttb" type="radio" value="Terabit (tb) " name="radio2"
+                        class="w-5 h-5 text-sky-800 bg-gray-100 border-gray-300 focus:ring-sky-800 dark:focus:ring-sky-800 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                    <label for="" class="ms-2 text-sm font-medium text-white">Terabit (tb) </label>
+                </div>
+                <!--  -->
+                <div class="flex items-center mb-4">
+                    <input id="tTB" type="radio" value="Terabyte (TB)" name="radio2"
+                        class="w-5 h-5 text-sky-800 bg-gray-100 border-gray-300 focus:ring-sky-800 dark:focus:ring-sky-800 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                    <label for="" class="ms-2 text-sm font-medium text-white">Terabyte (TB)</label>
+                </div>
+
+            </div>
+        </div>
+        <!--  -->
+        <!--  -->
+    </main>
+    <!-- end main -->
+
+    <!-- local script app  -->
+    <script src="script/storage.js"></script>
+    <!-- font-awesome -->
+    <script src="https://kit.fontawesome.com/c8105c8ce4.js" crossorigin="anonymous"></script>
+    <!-- sdn flowbite -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
+</body>
+
+</html>
